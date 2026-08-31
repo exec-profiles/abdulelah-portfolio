@@ -287,7 +287,7 @@
     .fab-nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 15px;
       overflow-x: auto;
       white-space: nowrap;
       scrollbar-width: none;
@@ -1370,8 +1370,8 @@
               <div style="font-size:12.5px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF; text-transform:uppercase; font-family:var(--font-heading); line-height:1.2;">
                 ABDULELAH ALSHAHRANI
               </div>
-              <div data-i18n="header_subtitle" style="font-size:9.5px; color:#38BDF8; font-family:var(--font-mono); font-weight:700;">
-                PROCUREMENT EXECUTIVE &bull; NEOM
+              <div data-i18n="header_subtitle" style="font-size:9px; color:#38BDF8; font-family:var(--font-mono); font-weight:700; letter-spacing:0.04em;">
+                PROCUREMENT EXECUTIVE &bull; STRATEGIC CONSULTANT &bull; FOUNDER
               </div>
             </div>
           </a>
@@ -1438,7 +1438,9 @@
           <a href="#map-footprint" class="fab-nav-item" data-i18n="nav_map">Project Map</a>
           <a href="#highlights" class="fab-nav-item" data-i18n="nav_highlights">Leadership Highlights</a>
           <a href="#experience" class="fab-nav-item" data-i18n="nav_experience">Work Experience</a>
-          <a href="#projects" class="fab-nav-item" data-i18n="nav_projects">Project Portfolio</a>
+          <a href="#projects" class="fab-nav-item" data-i18n="nav_projects">Flagship Projects</a>
+          <a href="#consulting" class="fab-nav-item" data-i18n="nav_consulting">Consulting Experience</a>
+          <a href="#venture" class="fab-nav-item" data-i18n="nav_venture">Founder &bull; Project Care</a>
           <a href="#tech-skills" class="fab-nav-item" data-i18n="nav_skills">Skills & Systems</a>
           <a href="#credentials" class="fab-nav-item" data-i18n="nav_credentials">Education & MCIPS</a>
           <a href="#contact" class="fab-nav-item" data-i18n="nav_contact">Connect Channels</a>
@@ -1452,43 +1454,51 @@
     <!-- TOP-NOTCH EXECUTIVE MOBILE DRAWER -->
     <div id="mobile-nav-drawer" style="display:none;">
       <div class="mobile-drawer-grid">
-        <a href="#overview" class="mobile-link">
+        <a href="#overview" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_overview">Overview</span>
           <span class="mobile-link-badge">01</span>
         </a>
-        <a href="#journey" class="mobile-link">
+        <a href="#journey" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_journey">6-Stage Journey</span>
           <span class="mobile-link-badge">02</span>
         </a>
-        <a href="#analytics" class="mobile-link">
+        <a href="#analytics" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_analytics">Visual Analytics</span>
           <span class="mobile-link-badge">03</span>
         </a>
-        <a href="#map-footprint" class="mobile-link">
+        <a href="#map-footprint" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_map">Project Map</span>
           <span class="mobile-link-badge">04</span>
         </a>
-        <a href="#highlights" class="mobile-link">
+        <a href="#highlights" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_highlights">Leadership Highlights</span>
           <span class="mobile-link-badge">05</span>
         </a>
-        <a href="#experience" class="mobile-link">
+        <a href="#experience" class="mobile-link" onclick="toggleMobileNav()">
           <span data-i18n="nav_experience">Work Experience</span>
           <span class="mobile-link-badge">06</span>
         </a>
-        <a href="#projects" class="mobile-link">
-          <span data-i18n="nav_projects">Project Portfolio</span>
+        <a href="#projects" class="mobile-link" onclick="toggleMobileNav()">
+          <span data-i18n="nav_projects">Flagship Projects</span>
           <span class="mobile-link-badge">07</span>
         </a>
-        <a href="#tech-skills" class="mobile-link">
-          <span data-i18n="nav_skills">Skills & Systems</span>
+        <a href="#consulting" class="mobile-link" onclick="toggleMobileNav()">
+          <span data-i18n="nav_consulting">Consulting Experience</span>
           <span class="mobile-link-badge">08</span>
         </a>
-        <a href="#credentials" class="mobile-link">
-          <span data-i18n="nav_credentials">Education & MCIPS</span>
+        <a href="#venture" class="mobile-link" onclick="toggleMobileNav()">
+          <span data-i18n="nav_venture">Founder &bull; Project Care</span>
           <span class="mobile-link-badge">09</span>
         </a>
-        <a href="#contact" class="mobile-link highlight-item">
+        <a href="#tech-skills" class="mobile-link" onclick="toggleMobileNav()">
+          <span data-i18n="nav_skills">Skills & Systems</span>
+          <span class="mobile-link-badge">10</span>
+        </a>
+        <a href="#credentials" class="mobile-link" onclick="toggleMobileNav()">
+          <span data-i18n="nav_credentials">Education & MCIPS</span>
+          <span class="mobile-link-badge">11</span>
+        </a>
+        <a href="#contact" class="mobile-link highlight-item" onclick="toggleMobileNav()">
           <span style="color:#38BDF8; font-weight:800;" data-i18n="nav_contact">Connect Channels</span>
           <span class="mobile-link-badge" style="color:#38BDF8; background:rgba(56,189,248,0.2);">&rsaquo;</span>
         </a>
@@ -3632,7 +3642,7 @@
         en: {
           lang_btn: 'English',
           switched_toast: 'Switched to English',
-          header_subtitle: 'PROCUREMENT EXECUTIVE • NEOM',
+          header_subtitle: 'PROCUREMENT EXECUTIVE • STRATEGIC CONSULTANT • FOUNDER',
           direct_contact: 'Direct Contact',
           exec_cv: 'Executive CV',
           share_btn: 'Share',
@@ -3707,7 +3717,7 @@
         ar: {
           lang_btn: 'العربية',
           switched_toast: 'تم التبديل إلى اللغة العربية بنجاح',
-          header_subtitle: 'قائد المشتريات وإدارة العقود • نيوم',
+          header_subtitle: 'تنفيذي المشتريات • مستشار استراتيجي • المؤسس والمدير العام',
           direct_contact: 'اتصال مباشر',
           exec_cv: 'السيرة الذاتية',
           share_btn: 'مشاركة',
